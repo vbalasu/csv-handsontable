@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.css">
+<link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
+<script src="https://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.js"></script>
+<script src="MyHot.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.6/papaparse.js"></script>
+<script src="MyPapa.js"></script>
+</head>
+<body>
+<div id="hot"></div>
+<script>
+    MyPapa.hotparse('data.csv', function(results) {
+        output = results;
+        console.log(results);
+        var ht = new MyHot(document.getElementById('hot'), results.colHeaders, results.columns, results.data);
+    });
+</script>
+</body>
+</html>

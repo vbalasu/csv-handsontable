@@ -1,0 +1,9 @@
+data,colHeaders,type,example
+id,ID,numeric,1
+flag,Country,text,EUR
+currencyCode,Code,text,EUR
+currency,Currency,text,Euro
+level,Level,numeric,0.9033
+units,Units,text,EUR / USD
+asOf,Date,date,42235
+onedChng,Change,numeric,0.0026
